@@ -1,17 +1,21 @@
 <?php
 
+use App\Http\Controllers\Api\BookController;
+use App\Http\Controllers\Api\BorrowController;
+use App\Http\Controllers\Api\AuthController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
+use Illuminate\Http\Request;
 
-// Public routes (registration & login)
+Route::apiResource('books', BookController::class);
+
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
-// Protected routes (requires authentication via Sanctum)
 Route::middleware('auth:sanctum')->group(function () {
-    // Route to get the authenticated user's info
-    Route::get('/user', [AuthController::class, 'user']);
-
-    // Route to log the user out (invalidate the Sanctum token)
+    Route::get('/me', [AuthController::class, 'me']);
     Route::post('/logout', [AuthController::class, 'logout']);
+
+    Route::post('/borrow', [BorrowController::class, 'borrow']);
+    Route::post('/return', [BorrowController::class, 'returnBook']);
+    Route::get('/my-borrows', [BorrowController::class, 'myBorrows']);
 });
