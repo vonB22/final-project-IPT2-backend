@@ -16,3 +16,22 @@
 - **Gaton, Rochelle G.** - Wrote API documentation
 - **Carungcong, Agatha Nicole V.** - Defined API routes
 - **Estayan, Janna G.** - Tested API
+
+## API Documentation
+
+### Books
+POST http://127.0.0.1:8000/api/books
+
+{
+    "message": "Book Created Successfully",
+    "data": {
+        "id": 1,
+        "title": "The Pain of Onkai",
+        "author": "N.K Edo",
+        "category": "Fiction",
+        "published": "2022",
+        "status": "Available",
+        "created_at": "2025-05-18T23:56:54:000000Z"
+    }
+}
+-- **This section of the API documentation outlines how to use the POST method at the endpoint http://127.0.0.1:8000/api/books to add a new book record. When a request is successfully processed, the server responds with a confirmation message and details about the newly created book. These details include the book's ID, title, author, genre, publication year, availability status, and the date and time it was added to the system.** - 
