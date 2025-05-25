@@ -19,7 +19,7 @@
 
 ## API Documentation
 
-# Books
+### Books
 POST `http://127.0.0.1:8000/api/books`
 
 ```
@@ -36,7 +36,7 @@ POST `http://127.0.0.1:8000/api/books`
     }
 }
 ```
-## This section of the API documentation outlines how to use the POST method at the endpoint http://127.0.0.1:8000/api/books to add a new book record. When a request is successfully processed, the server responds with a confirmation message and details about the newly created book. These details include the book's ID, title, author, genre, publication year, availability status, and the date and time it was added to the system.
+- **This section of the API documentation outlines how to use the POST method at the endpoint http://127.0.0.1:8000/api/books to add a new book record. When a request is successfully processed, the server responds with a confirmation message and details about the newly created book. These details include the book's ID, title, author, genre, publication year, availability status, and the date and time it was added to the system.** -  
 
 GET `http://127.0.0.1:8000/api/books/1`
 
@@ -53,7 +53,7 @@ GET `http://127.0.0.1:8000/api/books/1`
     }
 }
 ```
-## This endpoint retrieves the details of a specific book using its unique ID. By sending a GET request to http://127.0.0.1:8000/api/books/1, the API responds with a JSON object containing the book's information, including its ID, title, author, category, publication year, status, and the date it was created in the system.
+- **This endpoint retrieves the details of a specific book using its unique ID. By sending a GET request to http://127.0.0.1:8000/api/books/1, the API responds with a JSON object containing the book's information, including its ID, title, author, category, publication year, status, and the date it was created in the system.** -
 
 PUT `http://127.0.0.1:8000/api/books/1`
 
@@ -71,7 +71,7 @@ PUT `http://127.0.0.1:8000/api/books/1`
     }
 }
 ```
-## This endpoint updates the information of an existing book identified by its ID. It requires a JSON body with the new book details.
+- **This endpoint updates the information of an existing book identified by its ID. It requires a JSON body with the new book details.** -
 
 DELETE `http://127.0.0.1:8000/api/books/1`
 
@@ -80,9 +80,9 @@ DELETE `http://127.0.0.1:8000/api/books/1`
     "message": "Book Deleted Successfully"
 }
 ```
-## This API call sends a DELETE request to the server at http://127.0.0.1:8000, specifically targeting the resource with the ID 1 in the books collection. The purpose of this request is to delete the book with ID 1 from the system.
+- **This API call sends a DELETE request to the server at http://127.0.0.1:8000, specifically targeting the resource with the ID 1 in the books collection. The purpose of this request is to delete the book with ID 1 from the system.** -
 
-# Register
+### Register
 POST `http://127.0.0.1:8000/api/register`
 
 ```
@@ -98,9 +98,9 @@ POST `http://127.0.0.1:8000/api/register`
     }
 }
 ```
-## This endpoint is used to register a new user. Upon successful registration, it returns a success message, a personal access token, and the user's information.
+- **This endpoint is used to register a new user. Upon successful registration, it returns a success message, a personal access token, and the user's information.** -
 
-# Login
+### Login
 POST `http://127.0.0.1:8000/api/login`
 
 ```
@@ -117,9 +117,9 @@ POST `http://127.0.0.1:8000/api/login`
     }
 }
 ```
-## This endpoint allows existing users to log into the system. On successful login, it returns a confirmation message, an access token for authenticated requests, and user details.
+- **This endpoint allows existing users to log into the system. On successful login, it returns a confirmation message, an access token for authenticated requests, and user details.** -
 
-# Log out
+### Log out
 POST `http://127.0.0.1:8000/api/logout
 
 ```
@@ -127,4 +127,4 @@ POST `http://127.0.0.1:8000/api/logout
     "message": "Logged out"
 }
 ```
-## This endpoint logs out the currently authenticated user by invalidating their session or token. It is typically used to terminate the user's access and ensure security after their session ends.
+- **This endpoint logs out the currently authenticated user by invalidating their session or token. It is typically used to terminate the user's access and ensure security after their session ends.** -
