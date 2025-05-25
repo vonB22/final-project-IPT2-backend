@@ -120,7 +120,7 @@ POST `http://127.0.0.1:8000/api/login`
 - **This endpoint allows existing users to log into the system. On successful login, it returns a confirmation message, an access token for authenticated requests, and user details.** -
 
 ### Log out
-POST `http://127.0.0.1:8000/api/logout
+POST `http://127.0.0.1:8000/api/logout`
 
 ```
 {
