@@ -6,7 +6,7 @@ use App\Http\Controllers\Api\AuthController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-Route::apiResource('books', BookController::class);
+Route::apiResource('/books', \App\Http\Controllers\Api\BookController::class);
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -19,5 +19,4 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/return', [BorrowController::class, 'returnBook']);
     Route::get('/my-borrows', [BorrowController::class, 'myBorrows']);
     
-
 });

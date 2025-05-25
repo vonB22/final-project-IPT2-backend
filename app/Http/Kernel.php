@@ -47,13 +47,9 @@ class Kernel extends HttpKernel
     protected $middlewareGroups = [
         'web' => [
             // ...existing code...
-            // \App\Http\Middleware\VerifyCsrfToken::class,
-            // ...existing code...
         ],
 
         'api' => [
-            // ...existing code...
-            // Ensure \App\Http\Middleware\VerifyCsrfToken::class is NOT here
             // ...existing code...
         ],
     ];
